@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "aic"
+version = "0.1.0"
+description = "Comand line AI"
+authors = ["Carlos Costa <carllos.nc@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+pygments = "^2.18.0"
+google-generativeai = "^0.8.3"
+grpcio = "1.60.1"
+rich = "^13.9.4"
+pyinstaller = "^6.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dev = "aic:main"
