@@ -30,6 +30,7 @@ def no_api_key_message():
 
 def use():
     GEMINI_API_KEY = os.environ.get(API_KEY)
+    response = None
 
     if GEMINI_API_KEY is None:
         no_api_key_message()
@@ -44,9 +45,11 @@ def use():
     if Question == "exit":
         exit()
 
-    response = model.generate_content(
-        Prompt.text(Question),
-    )
+    try:
+        response = model.generate_content(Prompt.text(Question))
+    except Exception as e:
+        console.print(f"⚠ ERROR: {e}", style="bold red")
+        exit()
 
     json_response = json.loads(response.text.replace("```json", "").replace("```", ""))
 
