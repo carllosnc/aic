@@ -26,4 +26,6 @@ def text(Question):
   - don't show anything in markdown format
   - don't the main response in markdown format
   - dont use ** or `` in the response
+  - for libs and frameworks, use the main language of the code, ex: for svelte use javascript, for ruby on rails use ruby, for react use javascript, for laravel use php, etc
+  - for question involving javascript frameworks, use html as programming language
   """
