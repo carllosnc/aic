@@ -3,7 +3,7 @@ from pygments.lexers import get_lexer_by_name
 from pygments.formatters import Terminal256Formatter
 import time
 
-def typingEffect(text):
+def typing_effect(text):
     for char in text:
         time.sleep(0.002)
         print(char, end='', flush=True)

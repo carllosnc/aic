@@ -57,9 +57,9 @@ def use():
 
     for item in json_response["response"]:
         if item["type"] == "text" and item["content"] != "":
-            Front.typingEffect(item["content"])
+            Front.typing_effect(item["content"])
             print("\u2800")
             print("\u2800")
         elif item["type"] == "code":
-            Front.typingEffect(Front.highlight_code(item["content"], item["language"]))
+            Front.typing_effect(Front.highlight_code(item["content"], item["language"]))
             print("\u2800")
