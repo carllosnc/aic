@@ -24,7 +24,7 @@ poetry run aic
 
 Build
 ```sh
-poetry run pyinstaller --onefile .\aic\__init__.py
+poetry run pyinstaller --onefile ./aic/__init__.py --name aic
 ```
 
 ---
